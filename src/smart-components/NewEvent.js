@@ -61,37 +61,6 @@ class NewEvent extends Component {
             </div>
           </div>
       </div>
-     /*  <form>
-        <legend className="mt-4">Event Information</legend>
-        <hr />
-        <div className="input-group">
-          <span className="input-group-addon" id="basic-addon1">Title</span>
-          <input type="text" className="form-control" placeholder="" aria-label="title" aria-describedby="basic-addon1" />
-        </div>
-        <br />
-        <div className="input-group">
-        <span className="input-group-addon" id="basic-addon1">Description</span>
-        <input type="text" className="form-control" placeholder="" aria-label="description" aria-describedby="basic-addon1" />
-        </div>
-        <br />
-        <div className="input-group">
-        <span className="input-group-addon" id="basic-addon1">Schedule</span>
-        </div>
-        <hr />
-        <br />
-        <div className="input-group">
-        <span className="input-group-addon" id="basic-addon1">Start Date:</span>
-        <input type="date" className="form-control" placeholder="" aria-label="description" aria-describedby="basic-addon1" />
-        </div>
-        <br />
-        <div className="input-group">
-        <span className="input-group-addon" id="basic-addon1">End Date:</span>
-        <input type="date" className="form-control" placeholder="" aria-label="description" aria-describedby="basic-addon1" />
-        </div>
-        <br />
-        <input className="btn btn-primary ml-5" type="submit" value="Create Event" />
-        <input className="btn btn-primary ml-5" type="reset" value="Cancel" />
-      </form> */
       )
     }
 }
