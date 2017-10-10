@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-//Icon
 import FaListUI from 'react-icons/lib/fa/list-ul';
 import FaListAlt from 'react-icons/lib/fa/list-alt';
 import Facog from 'react-icons/lib/fa/cog';
