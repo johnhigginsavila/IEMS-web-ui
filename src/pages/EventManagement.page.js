@@ -1,12 +1,9 @@
 import React,  { Component } from 'react';
 import Navigation from '../smart-components/Navigation';
 import { Link } from 'react-router';
-//SideNav Component
 import RightSideNav from '../dumb-components/RightSideNav.component';
 import LeftSideNav from '../dumb-components/LeftSideNav.component';
-//Icon
 import FaListUI from 'react-icons/lib/fa/list-ul';
-//style
 import '../styles/eventManagement.page.scss';
 class EventManagementPage extends Component {
   render () {
