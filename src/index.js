@@ -13,6 +13,7 @@ import App from './pages/App';
 import HomePage from './pages/Home.page';
 import DashboardPage from './pages/Dashboard.page';
 import EventManagementPage from './pages/EventManagement.page';
+import NewEvent from './smart-components/NewEvent';
 import AdminPage from './pages/Admin.page';
 import ProfilePage from './pages/Profile.page';
 import RequireAuth from './smart-components/auth/requireAuth';
@@ -34,6 +35,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
         <Route path="event-management" component={RequireAuth(EventManagementPage)} />
+        <Route path="event-management/NewEvent" component={RequireAuth(NewEvent)} />
         <Route path="profile" component={ProfilePage} />
         <Route path="dashboard" component={DashboardPage} />
         <Route path="admin" component={RequireAdmin(AdminPage)} />
