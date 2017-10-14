@@ -42,8 +42,8 @@ class Signup extends Component {
         </div>
         {passwordConfirm.touched && passwordConfirm.error && <div className="alert alert-danger">{passwordConfirm.error}</div>}
         <br />
-        <input className="btn btn-primary ml-5" type="submit" value="Submit" />
-        <input className="btn btn-primary ml-5" type="reset" value="Reset" />
+        <input className="btn btn-primary col-lg-3 col-sm-12 submitBtn" type="submit" value="Submit" />
+        <input className="btn btn-primary col-lg-3 col-sm-12 resetBtn" type="reset" value="Reset" />
       </form>
     );
   }

@@ -8,6 +8,8 @@ import Signin from '../smart-components/Signin';
 import Welcome from '../smart-components/Welcome';
 import AnchorLinkToggle from '../dumb-components/AnchorLinkToggle';
 
+import '../styles/homePage.scss';
+
 class HomePage extends Component {
   constructor(props){
     super(props)
@@ -55,25 +57,25 @@ class HomePage extends Component {
   }
   render () {
     return (
-      <div>
-        <div className="container">
-          <div className="col-lg-8">
+      <div className="container-fluid homepageContainer">
+        <div className="homepageBody col-12 row">
+          <div className="sessionContainer col-lg-4 col-sm-12 order-lg-12">
+              {
+                (!this.props.authenticated) ? 
+                <div>
+                  {
+                    this.renderSigninSignout()
+                  }
+                </div>
+                : 
+                <div>
+                  <h1>You are signed-in</h1>
+                  <button onClick={this.handleLogoutButton.bind(this)}>Logout</button>
+                </div>
+              }
+            </div>
+          <div className="col-lg-8 col-sm-12 order-lg-1 welcomeContainer">
             <Welcome />
-          </div>
-          <div className="col-lg-4">
-            {
-              (!this.props.authenticated) ? 
-              <div>
-                {
-                  this.renderSigninSignout()
-                }
-              </div>
-              : 
-              <div>
-                <h1>You are signed-in</h1>
-                <button onClick={this.handleLogoutButton.bind(this)}>Logout</button>
-              </div>
-            }
           </div>
         </div>
       </div>
