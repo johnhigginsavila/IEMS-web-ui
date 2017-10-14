@@ -2,7 +2,7 @@ import React from 'react';
 
 const Welcome = () => {
   return (
-    <div className="navigationJumbotron p-5">
+    <div className="navigationJumbotron">
       <div className="jumbotron">
         <h4 className="display-4">Informatics College Manila</h4>
         <p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />Summum ením bonum exposuit vacuitatem doloris</p>

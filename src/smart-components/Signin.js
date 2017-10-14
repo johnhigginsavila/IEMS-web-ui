@@ -35,8 +35,8 @@ class SignIn extends Component {
           <input {...password} type="password" className="form-control" placeholder="" aria-label="Password" aria-describedby="basic-addon1" />
         </div>
         <br />
-        <input className="btn btn-primary ml-5" type="submit" value="Submit" />
-        <input className="btn btn-primary ml-5" type="reset" value="Reset" />
+        <input className="btn btn-primary col-sm-12 col-lg-3 submitBtn" type="submit" value="Submit" />
+        <input className="btn btn-primary col-sm-12 col-lg-3 resetBtn" type="reset" value="Reset" />
       </form>
       </div>
     );
