@@ -37,6 +37,7 @@
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
+    "proptypes": "^0.14.3",
     "react": "^0.14.3",
     "react-calendar": "^2.2.0",
     "react-dev-utils": "^4.1.0",
