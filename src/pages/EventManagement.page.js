@@ -1,5 +1,5 @@
 import React,  { Component } from 'react';
-import LeftSideNav from '../dumb-components/LeftSideNav.component';
+import LeftSideNav from '../components/common/LeftSideNav.component';
 import '../styles/EventManagement.page.scss';
 class EventManagementPage extends Component {
   render () {
@@ -10,6 +10,7 @@ class EventManagementPage extends Component {
               <div className="page-header mt-3 col-sm-2 col-lg-2">
                 <LeftSideNav />
               </div>
+                {this.props.children}
             </main>
           </div>
         </div>
