@@ -13,11 +13,11 @@ import App from './pages/App';
 import HomePage from './pages/Home.page';
 import DashboardPage from './pages/Dashboard.page';
 import EventManagementPage from './pages/EventManagement.page';
-import NewActivity from './smart-components/NewActivity';
+import NewActivity from './components/NewActivity';
 import AdminPage from './pages/Admin.page';
 import ProfilePage from './pages/Profile.page';
-import RequireAuth from './smart-components/auth/requireAuth';
-import RequireAdmin from './smart-components/auth/requireAdmin';
+import RequireAuth from './components/auth/requireAuth';
+import RequireAdmin from './components/auth/requireAdmin';
 import { AUTH_USER } from './actions/types';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
@@ -34,8 +34,9 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomePage} />
-        <Route path="event-management" component={RequireAuth(EventManagementPage)} />
-        <Route path="event-management/NewEvent" component={RequireAuth(NewActivity)} />
+        <Route path="event-management" component={RequireAuth(EventManagementPage)}>
+          <Route path="new-activity" component={NewActivity} />
+        </Route>
         <Route path="profile" component={ProfilePage} />
         <Route path="dashboard" component={DashboardPage} />
         <Route path="admin" component={RequireAdmin(AdminPage)} />

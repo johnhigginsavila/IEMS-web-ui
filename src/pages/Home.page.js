@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as AuthAction from '../actions/AuthAction';
 
-import Signup from '../smart-components/Signup';
-import Signin from '../smart-components/Signin';
-import Welcome from '../smart-components/Welcome';
-import AnchorLinkToggle from '../dumb-components/AnchorLinkToggle';
+import Signup from '../components/Signup';
+import Signin from '../components/Signin';
+import Welcome from '../components/Welcome';
+import AnchorLinkToggle from '../components/common/AnchorLinkToggle';
 
 import '../styles/HomePage.scss';
 
