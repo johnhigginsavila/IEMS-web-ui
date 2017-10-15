@@ -3,8 +3,14 @@ import { connect } from 'react-redux';
 import '../styles/Navigation.scss';
 import { Link } from 'react-router';
 import logo from '../images/logo.png';
+import * as AuthAction from '../actions/AuthAction';
 
 class Navigation extends Component {
+
+  handleLogoutButton () {
+    this.props.signoutUser();
+  }
+
   renderLinks () {
     const { user, authenticated } = this.props;
     let admin;
@@ -31,7 +37,7 @@ class Navigation extends Component {
           <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <Link to="/profile" className="dropdown-item" >My Profile</Link>
             <a className="dropdown-item" >Inbox</a>
-            <a className="dropdown-item" >Sign-out</a>
+            <a className="dropdown-item" onClick={this.handleLogoutButton.bind(this)}>Sign-out</a>
           </div>
         </li>}
       </ul>
@@ -40,7 +46,7 @@ class Navigation extends Component {
   render () {
     console.log(this.props);
     return (
-      <div className="navigationPage">
+      <div className="navigationPageContainer">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <a className="navbar-brand" href="http://www.informatics.edu.ph" ><img src={logo} alt="logo" /></a>
@@ -64,4 +70,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null) (Navigation);
+export default connect(mapStateToProps, {...AuthAction}) (Navigation);

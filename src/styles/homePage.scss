@@ -1,0 +1,102 @@
+.homepageContainer {
+  margin:0;
+  .homepageBody {
+    padding:0;
+    margin: 0;
+    .sessionContainer {
+      padding: 1rem;
+      .resetBtn {
+        margin-top: 0.5rem;
+      }
+    }
+    .welcomeContainer {
+      padding: 1rem;
+      .navigationJumbotron {
+        .jumbotron {
+          h4 {
+            font-size: 1.25rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(min-width: 576px) {
+  .homepageContainer {
+    margin:0;
+    .homepageBody {
+      padding:0;
+      margin: 0;
+      .sessionContainer {
+        padding: 1rem;
+      }
+      .welcomeContainer {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .homepageContainer {
+    margin:0;
+    .homepageBody {
+      padding:0;
+      margin: 0;
+      .sessionContainer {
+        padding: 1rem;
+      }
+      .welcomeContainer {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .homepageContainer {
+    margin:0;
+    .homepageBody {
+      padding:0;
+      margin: 0;
+      .sessionContainer {
+        padding: 1rem;
+        .resetBtn {
+          margin-top: 0rem;
+          margin-left: 1rem;
+        }
+        .submitBtn {
+          margin-left: 5rem;
+        }
+      }
+      .welcomeContainer {
+        padding: 1rem;
+        .navigationJumbotron {
+          .jumbotron {
+            h4 {
+              font-size: 3.25rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) { 
+  .homepageContainer {
+    margin:0;
+    .homepageBody {
+      padding:0;
+      margin: 0;
+      .sessionContainer {
+        padding: 1rem;
+      }
+      .welcomeContainer {
+        padding: 1rem;
+      }
+    }
+  }
+}

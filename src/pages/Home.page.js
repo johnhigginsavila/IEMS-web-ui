@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as AuthAction from '../actions/AuthAction';
 
-import Signup from '../smart-components/Signup';
-import Signin from '../smart-components/Signin';
-import Welcome from '../smart-components/Welcome';
-import AnchorLinkToggle from '../dumb-components/AnchorLinkToggle';
+import Signup from '../components/Signup';
+import Signin from '../components/Signin';
+import Welcome from '../components/Welcome';
+import AnchorLinkToggle from '../components/common/AnchorLinkToggle';
+
+import '../styles/HomePage.scss';
 
 class HomePage extends Component {
   constructor(props){
@@ -36,8 +38,8 @@ class HomePage extends Component {
         <Signin />
         <AnchorLinkToggle
           toggle={this.state.toggleSignup}
-          toggleFalse={"Have a an account? click here to Sign In..."}
-          toggleTrue={"Dont have an account? click here to Sign Up..."}
+          toggleTrue={"Have a an account? click here to Sign In..."}
+          toggleFalse={"Dont have an account? click here to Sign Up..."}
           onToggle={this.handleSignupToggle.bind(this)}
         />
       </div>
@@ -46,34 +48,32 @@ class HomePage extends Component {
         <Signup />
         <AnchorLinkToggle
           toggle={this.state.toggleSignup}
-          toggleFalse={"Have a an account? click here to Sign In..."}
-          toggleTrue={"Dont have an account? click here to Sign Up..."}
+          toggleTrue={"Have a an account? click here to Sign In..."}
+          toggleFalse={"Dont have an account? click here to Sign Up..."}
           onToggle={this.handleSignupToggle.bind(this)}
         />
       </div>
     );
   }
   render () {
+    console.log(this.props);
     return (
-      <div>
-        <div className="container">
-          <div className="col-lg-8">
+      <div className="container-fluid homepageContainer">
+        <div className="homepageBody col-12 row">
+          <div className="sessionContainer col-lg-4 col-sm-12 order-lg-12">
+              {
+                (!this.props.authenticated) ? 
+                <div>
+                  {
+                    this.renderSigninSignout()
+                  }
+                </div>
+                : 
+                null
+              }
+            </div>
+          <div className="col-lg-8 col-sm-12 order-lg-1 welcomeContainer">
             <Welcome />
-          </div>
-          <div className="col-lg-4">
-            {
-              (!this.props.authenticated) ? 
-              <div>
-                {
-                  this.renderSigninSignout()
-                }
-              </div>
-              : 
-              <div>
-                <h1>You are signed-in</h1>
-                <button onClick={this.handleLogoutButton.bind(this)}>Logout</button>
-              </div>
-            }
           </div>
         </div>
       </div>

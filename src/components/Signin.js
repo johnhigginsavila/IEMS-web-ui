@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import * as AuthAction from '../actions/AuthAction';
+import InputGroup from './common/InputGroup';
 
 class SignIn extends Component {
   handlesFormSubmit ({email, password}) {
@@ -25,18 +26,20 @@ class SignIn extends Component {
         <form onSubmit={handleSubmit(this.handlesFormSubmit.bind(this))} onReset={this.handeFormReset.bind(this)}>
         <legend>Sign in</legend>
         {this.renderAlert()}
-        <div className="input-group">
-          <span className="input-group-addon" id="basic-addon1">Email:</span>
-          <input {...email} type="text" className="form-control" placeholder="" aria-label="Email" aria-describedby="basic-addon1" />
-        </div>
+        <InputGroup
+          form={email}
+          type="email"
+          label="Email"
+        />
         <br />
-        <div className="input-group">
-          <span className="input-group-addon" id="basic-addon2">Password:</span>
-          <input {...password} type="password" className="form-control" placeholder="" aria-label="Password" aria-describedby="basic-addon1" />
-        </div>
+        <InputGroup
+          form={password}
+          type="password"
+          label="Password"
+        />
         <br />
-        <input className="btn btn-primary ml-5" type="submit" value="Submit" />
-        <input className="btn btn-primary ml-5" type="reset" value="Reset" />
+        <input className="btn btn-primary col-sm-12 col-lg-3 submitBtn" type="submit" value="Submit" />
+        <input className="btn btn-primary col-sm-12 col-lg-3 resetBtn" type="reset" value="Reset" />
       </form>
       </div>
     );

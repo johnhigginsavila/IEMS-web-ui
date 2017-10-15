@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, RESET_AUTH_ERROR } from './types';
-const ROOT_URL = 'http://localhost:5000';
+import { ROOT_URL } from '../api.config';
 
 export function signinUser ({email, password}) {
   return function (dispatch) {
