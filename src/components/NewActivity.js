@@ -3,16 +3,19 @@ import { reduxForm } from 'redux-form';
 import '../styles/NewActivity.scss';
 import InputGroup from './common/InputGroup';
 
+import * as ActivityAction from '../actions/ActivityAction';
+
 class NewActivity extends Component {
   constructor (props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
-  handleFormSubmit ({activity, event, startDate, endDate}) {
-    console.log(activity, event, startDate, endDate);
+  handleFormSubmit (formProps) {
+    console.log(formProps);
+    this.props.addActivity(formProps);
   }
   render () {
-    const {handleSubmit, fields: {activity, event, startDate, endDate}} = this.props;
+    const {handleSubmit, fields: {activityName, event, startDate, endDate}} = this.props;
     return (
       <div className="container-fluid newActivityContainer">
         <div className="row d-flex d-md-block flex-nowrap wrapper newActivityBody">
@@ -24,7 +27,7 @@ class NewActivity extends Component {
                   <InputGroup
                     label="Activity"
                     type="text"
-                    form={activity}
+                    form={activityName}
                   />
                   <br />
                   <InputGroup
@@ -62,5 +65,5 @@ class NewActivity extends Component {
 }
 export default reduxForm({
   form: 'newActivity',
-  fields: ['activity', 'event', 'startDate', 'endDate']
-}, null, null)(NewActivity);
+  fields: ['activityName', 'event', 'startDate', 'endDate']
+}, null, {...ActivityAction})(NewActivity);
