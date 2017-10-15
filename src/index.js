@@ -37,8 +37,8 @@ ReactDOM.render(
         <Route path="event-management" component={RequireAuth(EventManagementPage)}>
           <Route path="new-activity" component={NewActivity} />
         </Route>
-        <Route path="profile" component={ProfilePage} />
-        <Route path="dashboard" component={DashboardPage} />
+        <Route path="profile" component={RequireAuth(ProfilePage)} />
+        <Route path="dashboard" component={RequireAuth(DashboardPage)} />
         <Route path="admin" component={RequireAdmin(AdminPage)} />
       </Route>
     </Router>
