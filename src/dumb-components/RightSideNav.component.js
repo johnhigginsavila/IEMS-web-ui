@@ -1,8 +1,6 @@
 import React from 'react';
 import Calendar from 'react-calendar';
 import '../styles/RightSideNav.component.scss';
-//Icon
-import FaListUI from 'react-icons/lib/fa/list-ul';
 const RightSideNav = () => {
   return (
     <div>

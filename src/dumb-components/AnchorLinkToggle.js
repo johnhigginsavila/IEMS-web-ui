@@ -1,24 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AnchorLinkToggle = (props) => {
   const {toggle, toggleTrue, toggleFalse, onToggle } = props;
   return (
-    <div>
+    <div style={{color: '#007bff', cursor: 'pointer'}}>
       {
         (toggle) ? 
-        <a onClick={onToggle.bind(this)}>{toggleTrue}</a>
+        <span onClick={onToggle.bind(this)}>{toggleTrue}</span>
         :
-        <a onClick={onToggle.bind(this)}>{toggleFalse}</a>
+        <span onClick={onToggle.bind(this)}>{toggleFalse}</span>
       }
     </div>
   );
 }
 
-AnchorLinkToggle.prototype = {
-  toggle: React.PropTypes.bool,
-  toggleTrue: React.PropTypes.string,
-  toggleFalse: React.PropTypes.string,
-  onToggle: React.PropTypes.func
+AnchorLinkToggle.proptype = {
+  toggle: PropTypes.bool,
+  toggleTrue: PropTypes.string,
+  toggleFalse: PropTypes.string,
+  onToggle: PropTypes.func
 }
 
 export default AnchorLinkToggle;

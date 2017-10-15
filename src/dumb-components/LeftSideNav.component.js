@@ -1,37 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router';
-import FaListUI from 'react-icons/lib/fa/list-ul';
 import FaListAlt from 'react-icons/lib/fa/list-alt';
-import Facog from 'react-icons/lib/fa/cog';
-const RightSideNav = () => {
+import CalendarPlusO from 'react-icons/lib/fa/calendar-plus-o';
+import '../styles/LeftSideNav.component.scss';
+const LeftSideNav = () => {
   return (
-    <div>
-      <div className="container-fluid">
+    <div className="LeftSideNavContainer">
         <div className="dropdown" id="eventSelector">
-          <a className="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <Facog size={26} />Activity 1
+          <a className="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuActivity" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Activity 1 
           </a>
-
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a className="dropdown-item" href="#">Manage activity 1</a>
-            <a className="dropdown-item" href="#">Manage activity 2</a>
-            <a className="dropdown-item"><Link to="event-management/NewEvent">New Activity</Link></a>
+          <Link to="event-management/NewEvent"><CalendarPlusO className="CalendarPlusO" size={26} color="#007bff" /></Link>
+          <div className="dropdown-menu" aria-labelledby="dropdownMenuActivity">
+            <a className="dropdown-item" >Manage activity 1</a>
+            <a className="dropdown-item" >Manage activity 2</a>
           </div>
         </div>
         <hr />
         <div className="dropdown">
-          <a className="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <FaListAlt size={26} />Program 1
+          <a className="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLinkProgram" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Program 1
           </a>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a className="dropdown-item" href="#">Program 1</a>
-            <a className="dropdown-item" href="#">Program 2</a>
-            <a className="dropdown-item" href="#">New Program</a>
+          <div className="dropdown-menu" aria-labelledby="dropdownMenuLinkProgram">
+            <a className="dropdown-item" >Program 1</a>
+            <a className="dropdown-item" >Program 2</a>
           </div>
         </div>
-      </div>
     </div>
   )
 }
 
-export default RightSideNav;
+export default LeftSideNav;
