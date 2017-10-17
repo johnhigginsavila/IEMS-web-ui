@@ -1,6 +1,6 @@
 import React,  { Component } from 'react';
 import LeftSideNav from '../components/common/LeftSideNav.component';
-import '../styles/EventManagement.page.scss';
+import '../styles/eventManagement.page.scss';
 class EventManagementPage extends Component {
   render () {
     return (
