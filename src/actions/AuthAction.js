@@ -10,7 +10,11 @@ export function signinUser ({email, password}) {
       dispatch({type: AUTH_USER, payload:response.data.user});
       localStorage.setItem('token',response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
-      browserHistory.push('/event-management');
+      if(response.data.user.admin) {
+        browserHistory.push('/event-management');
+      } else {
+        browserHistory.push('/');
+      }
     })
     .catch(() => {
       dispatch(authError('Bad login Info'));
@@ -25,7 +29,11 @@ export function signupUser ({email, password}) {
       dispatch({type: AUTH_USER, payload:response.data.user});
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
-      browserHistory.push('/event-management');
+      if(response.data.user.admin) {
+        browserHistory.push('/event-management');
+      } else {
+        browserHistory.push('/');
+      }
     })
     .catch(response => {
       dispatch(authError(response.data.error));
