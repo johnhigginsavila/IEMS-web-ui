@@ -1,0 +1,32 @@
+.dashboardContainer {
+    margin: 2rem;
+      .dashboardHeading {
+        text-align: left;
+      }
+      .dashboardContainerBody {
+        margin-top: 2rem;
+        .d-flex {
+          .dropdown {
+            a {
+              &.btn  {
+                font-size: 1.5rem;
+                padding: 0rem;
+              }
+            }
+          }
+        }
+        .eventSelector {
+  
+        }
+        .DashboardSubHeading {
+  
+        }
+        .eventDetails {
+  
+        }
+        .activityContainer {
+          margin-top: 2rem;
+        }
+      }
+   }
+  

@@ -8,7 +8,7 @@ import Signin from '../components/Signin';
 import Welcome from '../components/Welcome';
 import AnchorLinkToggle from '../components/common/AnchorLinkToggle';
 
-import '../styles/homePage.scss';
+import '../styles/HomePage.scss';
 
 class HomePage extends Component {
   constructor(props){
